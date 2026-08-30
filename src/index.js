@@ -1,1 +1,1 @@
-import "./canvas.css"
+import "./canvas.css";
