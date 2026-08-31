@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 * {
@@ -134,4 +134,34 @@ a {
 
 .todo-projects li::before {
   content: "#";
+}
+.todo-projects-area {
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 250px;
+  max-width: 830px;
+}
+
+.todo-project-title h1 {
+  font-family: Quicksand;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.description {
+  color: #999999;
+}
+.todolists ul {
+  list-style-type: none;
+  font-family: Quicksand;
+}
+
+.todo-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
 }
