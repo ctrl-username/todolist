@@ -4,7 +4,7 @@
   "description": "todo list app",
   "main": "index.js",
   "scripts": {
-    "test": "webpack serve & onchange '**/*' -- npx prettier --write --ignore-unknown {{changed}}",
+    "start": "webpack serve & onchange '**/*' -- npx prettier --write --ignore-unknown {{changed}}",
     "build": "webpack build",
     "format": "prettier . --write",
     "format:watch": "onchange '**/*' -- npx prettier --write --ignore-unknown {{changed}}"
