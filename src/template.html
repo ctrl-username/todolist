@@ -2,34 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link href="canvas.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <div class="header-left"></div>
-      </div>
+  <body class="container">
+    <nav class="top-nav-bar"></nav>
 
-      <div class="sidebar">
-        <div class="sidebar-header">
-          <span>
-            <img
-              src="assets/icons/fluent--calendar-todo-32-light.svg"
-              alt=""
-              width="32px"
-            />
-            Todolist</span
-          >
-        </div>
+    <aside class="left-sidebar">
+      <header class="sidebar-header">
+        <span>
+          <img
+            class="side-bar-logo"
+            src="assets/icons/fluent--calendar-todo-32-light.svg"
+            alt=""
+            width="32px"
+          />
+          Todolist
+        </span>
+      </header>
 
+      <section class="tasks-menu" aria-label="Tasks Controls">
         <div class="add-tasks">
-          <button class="add-todo">
+          <button class="add-todo" aria-label="Add tasks">
             <svg
               class="add-todo"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1024 1024"
+              aria-hidden="true"
             >
               <path
                 fill="currentColor"
@@ -45,81 +45,110 @@
           </button>
         </div>
 
-        <nav class="sidebar-nav">
-          <ul>
+        <nav class="sidebar-nav" aria-label="Tasks Navigation links">
+          <ul role="lists">
             <li>
-              <a href="">
+              <a href="#today">
                 <img
                   src="assets/icons/fluent--calendar-today-28-regular.svg"
                   alt=""
                   class="img-nav"
                 />
-                Today</a
-              >
+                Today
+              </a>
             </li>
             <li>
-              <a href=""
-                ><img
+              <a href="#upcoming">
+                <img
                   src="assets/icons/material-symbols--event-upcoming.svg"
                   alt=""
                   class="img-nav"
-                />Upcoming</a
-              >
+                />
+                Upcoming
+              </a>
             </li>
             <li>
-              <a href="">
+              <a href="#completed">
                 <img
                   src="assets/icons/fluent-mdl2--completed.svg"
                   alt=""
                   class="img-nav"
                 />
-                Completed</a
-              >
+                Completed
+              </a>
             </li>
           </ul>
         </nav>
 
-        <div class="projects-space">
-          <div class="todo-projects-bar">
-            <span class="projects">My Projects </span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
-              />
-            </svg>
-          </div>
-          <div class="todo-projects">
-            <ul>
-              <li>Portswigger Writeups</li>
-              <li>Malware Analysis</li>
-              <li>React Study Lab</li>
+        <section class="projects-space" aria-labelledby="projects-heading">
+          <header class="todo-projects-bar">
+            <h2 id="projects-heading" class="projects">My Projects</h2>
+            <button type="button" aria-label="Add project">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
+                />
+              </svg>
+            </button>
+          </header>
+          <nav class="todo-projects" aria-label="Projects">
+            <ul role="list">
+              <li><a href="#portswigger-writeups">Portswigger Writeups</a></li>
+              <li><a href="#malware-analysis">Malware Analysis</a></li>
+              <li><a href="#react-study-lab">React Study Lab</a></li>
             </ul>
-          </div>
-        </div>
-      </div>
+          </nav>
+        </section>
+      </section>
+    </aside>
 
-      <div class="todo-projects-area">
-        <div class="todo-project-title">
-          <h1 class="todo-project-title">Portswigger Writeups</h1>
-          <p class="description">Documenting my web security journey.</p>
-        </div>
 
-        <div class="todolists">
-          <ul>
-            <li class="todo-item">
-              Publish the write-ups on authentication vulnerability labs
-            </li>
-            <li class="todo-item">Review CSRF protections</li>
-            <li class="todo-item">
-              Prepare a short write-up on CSRF protections
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+
+    <main class="todo-project-area" aria-labelledby="todo-project-title">
+        <header class="project-heading">
+            <h1 id="todo-project-title">Portswigger Writeups</h1>
+            <p id="project-description" aria-label="Project Description">Documenting my web security journey</p>
+        </header>
+
+        <section class="todo-lists">
+            <h2 class="todos-heading">Tasks</h2>
+
+            <ul>
+              <li class="todo-item"><input class="check-box" type="checkbox"></input>
+                Publish the write-ups on authentication vulnerability labs
+              </li>
+              <li class="todo-item"><input class="check-box" type="checkbox"></input>Review CSRF protections</li>
+              <li class="todo-item">
+                <input class="checkbox" type="checkbox"></input>Prepare a short write-up on CSRF protections
+              </li>
+            </ul>
+
+        </section>
+
+
+    </main>
+
+    <aside id="task-details-section">
+<header id="task-details-heading">
+<h3>Task Details</h3>
+<button class="close-button" aria-label="close-task-detail">
+
+</button>
+</header>
+<div class="task-detail-body">
+<input type="checkbox"></input>
+<span>Publish the write-ups on authentication vulnerability labs</span>
+</div>
+    </aside>
+
+    <footer></footer>
   </body>
 </html>
