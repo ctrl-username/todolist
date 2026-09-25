@@ -19,13 +19,13 @@ function todoItem() {
     }
   }
 
-  function createTodo() {
+  function createTodo(title,description,date,priority="low",note) {
     let newItem = new Todo(
-      "eat rice",
-      "remember to eat",
-      10,
-      "low",
-      "hmm no note",
+      title,
+      description,
+      date,
+      priority,
+      note,
     );
 
     newItem.toggleChecklist();
@@ -33,10 +33,12 @@ function todoItem() {
     console.log(newItem.title);
     todoLists.push(newItem);
 
-    console.table(todoLists);
+
   }
 
-  createTodo();
+  createTodo("eat rice", "ni hao shi bu tofu", 9, "high", "wo men ji" );
+  createTodo("eat rice", "ni hao shi bu tofu", 9, "high", "wo men ji" );
+  console.log(todoLists)
 }
 todoItem()
 export { todoItem };
