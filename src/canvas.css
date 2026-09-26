@@ -42,17 +42,16 @@
   gap: 30px;
   font-family: "Google Sans";
 }
-.tasks-menu{
-display: flex;
-gap: 30px;
-flex-direction: column;
+.tasks-menu {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
 .sidebar-header {
   grid-row: 1/2;
   display: flex;
 
   padding-top: 40px;
-
 }
 
 .sidebar-header > span {
@@ -96,7 +95,6 @@ a {
 }
 
 .add-tasks button {
-
   min-height: 40px;
   color: var(--action-color);
   font-size: 16px;
@@ -119,7 +117,6 @@ a {
 
 .todo-projects-bar svg {
   width: 20px;
-
 }
 
 .todo-projects ul {
@@ -146,9 +143,7 @@ a {
   flex-direction: column;
   grid-column-start: 2;
   gap: 20px;
-max-width: 800px;
-
-
+  max-width: 800px;
 }
 
 .project-heading h1 {
@@ -177,29 +172,27 @@ max-width: 800px;
   border-bottom: none;
 }
 
-input[type="checkbox"]{
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-image: url(assets/icons/nrk--check-radio-unchecked.svg);
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url(assets/icons/nrk--check-radio-unchecked.svg);
 }
 
-input:checked{
-    background-size: contain;
-    background-image: url(assets/icons/nrk--checkmark-circle-checked-solid.svg) ;
+input:checked {
+  background-size: contain;
+  background-image: url(assets/icons/nrk--checkmark-circle-checked-solid.svg);
 }
 
-input[type="checkbox"]{
-
+input[type="checkbox"] {
 }
 
-.close-button{
-    background-image: url(assets/icons/ant-design--close-circle-outlined.svg);
-    width:20px;
-    height:20px;
+.close-button {
+  background-image: url(assets/icons/ant-design--close-circle-outlined.svg);
+  width: 20px;
+  height: 20px;
 }
 
-
-#task-details-section{
-    display:none;
+#task-details-section {
+  display: none;
 }

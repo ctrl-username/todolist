@@ -3,40 +3,41 @@
 //
 //
 
-function todoProjects(){
-let  projects = []
-  class Project{
-    constructor(name){
+function todoProjects() {
+  let projects = [];
+  class Project {
+    constructor(name) {
       this.id = crypto.randomUUID();
       this.name = name;
-      this.todos = []
+      this.todos = [];
     }
 
-    addTodo(todo){
-      this.todos.push(todo)
+    addTodo(todo) {
+      this.todos.push(todo);
     }
 
-    removeTodo(todo){
+    removeTodo(todo) {
       // this.todos.pop(todo)
       //
     }
   }
 
-
-
   const createProject = (project) => {
+    let newProject = new Project(project);
 
-let newProject = new Project(project)
+    projects.push(newProject);
+    return newProject;
+  };
 
-projects.push(newProject)
+  const defaultProject = createProject("general");
 
-  }
+  createProject("general");
 
-
- const defaultProject = createProject("general")
-
-  console.log(projects)
+  console.log(defaultProject.id);
 }
 
+todoProjects();
 
-todoProjects()
+
+
+export {todoProjects}

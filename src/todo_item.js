@@ -9,36 +9,28 @@ function todoItem() {
       this.dueDate = dueDate;
       this.priority = priority;
       this.notes = notes;
-      this.checklist = true
-
+      this.checklist = true;
     }
 
     toggleChecklist() {
-
       this.checklist = !this.checklist;
     }
   }
 
-  function createTodo(title,description,date,priority="low",note) {
-    let newItem = new Todo(
-      title,
-      description,
-      date,
-      priority,
-      note,
-    );
+  function createTodo(title, description, date, priority = "low", note) {
+    let newItem = new Todo(title, description, date, priority, note);
 
     newItem.toggleChecklist();
 
     console.log(newItem.title);
     todoLists.push(newItem);
-
-
   }
 
-  createTodo("eat rice", "ni hao shi bu tofu", 9, "high", "wo men ji" );
-  createTodo("eat rice", "ni hao shi bu tofu", 9, "high", "wo men ji" );
-  console.log(todoLists)
+  createTodo("eat rice", "ni hao shi bu tofu", 9, "high", "wo men ji");
+  createTodo("eat rice", "ni hao shi bu tofu", 9, "high", "wo men ji");
+  console.log(todoLists);
+
+  return {createTodo}
 }
-todoItem()
+todoItem();
 export { todoItem };
